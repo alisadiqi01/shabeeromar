@@ -77,27 +77,30 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "شبیر عمر | تولیدی کفش و دمپایی PVC و PU" },
+      { title: "شبیر عمر | تولیدی افغانستان کفش و دمپایی PVC و PU" },
       {
         name: "description",
         content:
           "شرکت تولیدی شبیر عمر — پیشرو در تولید کفش و دمپایی PVC و PU در افغانستان از سال ۱۳۹۰. کیفیت را با ما تجربه کنید.",
       },
       { name: "author", content: "Shabir Omar" },
-      { property: "og:title", content: "شبیر عمر | کیفیت را با ما تجربه کنید" },
+      { property: "og:title", content: "شبیر عمر | تولیدی افغانستان کفش و دمپایی PVC و PU" },
       {
         property: "og:description",
-        content: "تولید حرفه‌ای کفش و دمپایی PVC و PU با بیش از ۱۳ سال تجربه.",
+        content: "شرکت تولیدی شبیر عمر — پیشرو در تولید کفش و دمپایی PVC و PU در افغانستان از سال ۱۳۹۰. کیفیت را با ما تجربه کنید.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "شبیر عمر | تولیدی افغانستان کفش و دمپایی PVC و PU" },
+      { name: "twitter:description", content: "شرکت تولیدی شبیر عمر — پیشرو در تولید کفش و دمپایی PVC و PU در افغانستان از سال ۱۳۹۰. کیفیت را با ما تجربه کنید." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/525f35c7-4bb0-4d4b-aa6a-39f49ae246cb/id-preview-33cf795c--872ed25d-5e82-4d6b-bc30-cc9ecd8bc67d.lovable.app-1784163617659.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/525f35c7-4bb0-4d4b-aa6a-39f49ae246cb/id-preview-33cf795c--872ed25d-5e82-4d6b-bc30-cc9ecd8bc67d.lovable.app-1784163617659.png" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
