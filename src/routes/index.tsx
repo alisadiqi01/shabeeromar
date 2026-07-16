@@ -1,5 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import queenAsset from "@/assets/queen-010.png.asset.json";
+
+const queen010 = queenAsset.url;
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -143,10 +146,15 @@ function Index() {
           <div className="relative animate-rise" style={{ animationDelay: "0.2s" }}>
             <div className="glass-gold aspect-[4/5] w-full overflow-hidden rounded-3xl p-1">
               <div
-                className="relative flex h-full items-center justify-center rounded-3xl"
+                className="relative flex h-full items-center justify-center overflow-hidden rounded-3xl"
                 style={{ background: "var(--gradient-luxury)" }}
               >
-                <div className="text-[220px] leading-none opacity-90">👞</div>
+                <img
+                  src={queen010}
+                  alt="کفش زنانه Queen - کد ۰۱۰"
+                  className="h-full w-full object-cover"
+                  loading="eager"
+                />
                 <div className="absolute inset-x-0 bottom-0 p-8">
                   <div className="glass rounded-2xl p-5">
                     <div className="text-xs text-muted-foreground">محصول ویژه</div>
@@ -196,7 +204,7 @@ function Index() {
             colors={["سیاه", "جگری"]}
             size="۳۵ - ۴۱"
             desc="استفاده از نگین‌های مقاوم و تزئینات بادوام، طراحی زیبا در دو رنگ، مناسب بانوان و استفاده روزمره."
-            image="👠"
+            image={queen010}
           />
           <ProductCard soon />
           <ProductCard soon />
@@ -576,10 +584,14 @@ function ProductCard({
   return (
     <div className="glass group overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[oklch(0.82_0.14_82/0.4)]">
       <div
-        className="flex aspect-square items-center justify-center text-[140px] transition-transform duration-700 group-hover:scale-110"
+        className="flex aspect-square items-center justify-center overflow-hidden text-[140px] transition-transform duration-700 group-hover:scale-110"
         style={{ background: "var(--gradient-luxury)" }}
       >
-        {image}
+        {image && (image.startsWith("/") || image.startsWith("http")) ? (
+          <img src={image} alt={name} className="h-full w-full object-cover" loading="lazy" />
+        ) : (
+          image
+        )}
       </div>
       <div className="space-y-3 p-6">
         <div className="flex items-start justify-between">
