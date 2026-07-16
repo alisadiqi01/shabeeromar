@@ -584,10 +584,14 @@ function ProductCard({
   return (
     <div className="glass group overflow-hidden rounded-3xl transition-all duration-500 hover:-translate-y-2 hover:border-[oklch(0.82_0.14_82/0.4)]">
       <div
-        className="flex aspect-square items-center justify-center text-[140px] transition-transform duration-700 group-hover:scale-110"
+        className="flex aspect-square items-center justify-center overflow-hidden text-[140px] transition-transform duration-700 group-hover:scale-110"
         style={{ background: "var(--gradient-luxury)" }}
       >
-        {image}
+        {image && (image.startsWith("/") || image.startsWith("http")) ? (
+          <img src={image} alt={name} className="h-full w-full object-cover" loading="lazy" />
+        ) : (
+          image
+        )}
       </div>
       <div className="space-y-3 p-6">
         <div className="flex items-start justify-between">
