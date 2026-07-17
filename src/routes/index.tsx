@@ -149,8 +149,8 @@ function Index() {
                 style={{ background: "var(--gradient-luxury)" }}
               >
                 <img
-                  src={queen010}
-                  alt="کفش زنانه Queen - کد ۰۱۰"
+                  src={baby025}
+                  alt="دمپایی بچه‌گانه Baby - کد ۰۲۵"
                   className="h-full w-full object-cover"
                   loading="eager"
                 />
@@ -158,9 +158,9 @@ function Index() {
                   <div className="glass rounded-2xl p-5">
                     <div className="text-xs text-muted-foreground">محصول ویژه</div>
                     <div className="mt-1 font-[Playfair_Display] text-xl font-bold">
-                      کفش زنانه Queen
+                      Baby 😉
                     </div>
-                    <div className="mt-1 text-sm text-gold">۱۲۵ افغانی</div>
+                    <div className="mt-1 text-sm text-gold">۴۵۰ فی درجن</div>
                   </div>
                 </div>
               </div>
