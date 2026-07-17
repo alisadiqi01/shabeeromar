@@ -13,7 +13,6 @@ const nav = [
   { label: "محصولات", href: "#products" },
   { label: "درباره ما", href: "#about" },
   { label: "کارخانه", href: "#factory" },
-  { label: "وبلاگ", href: "#blog" },
   { label: "تماس", href: "#contact" },
 ];
 
@@ -343,32 +342,6 @@ function Index() {
         <div className="mx-auto max-w-3xl space-y-4">
           {faqs.map((f, i) => (
             <FaqItem key={i} q={f.q} a={f.a} />
-          ))}
-        </div>
-      </Section>
-
-      {/* BLOG */}
-      <Section id="blog" tag="وبلاگ" title="آخرین مقالات">
-        <div className="grid gap-6 md:grid-cols-3">
-          {[1, 2, 3].map((i) => (
-            <div
-              key={i}
-              className="glass group overflow-hidden rounded-2xl transition-all hover:-translate-y-1"
-            >
-              <div
-                className="flex aspect-video items-center justify-center text-6xl"
-                style={{ background: "var(--gradient-luxury)" }}
-              >
-                📰
-              </div>
-              <div className="p-6">
-                <div className="text-xs text-gold">به‌زودی</div>
-                <div className="mt-2 font-semibold">مقاله شماره {i}</div>
-                <div className="mt-2 text-sm text-muted-foreground">
-                  محتوای این بخش به‌زودی منتشر خواهد شد.
-                </div>
-              </div>
-            </div>
           ))}
         </div>
       </Section>
