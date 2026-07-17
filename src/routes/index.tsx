@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import queenAsset from "@/assets/queen-010.png.asset.json";
 
-const queen010 = queenAsset.url;
+const queen010 = "/images/queen-010.png";
 
 export const Route = createFileRoute("/")({
   component: Index,
