@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const queen010 = "/images/queen-010.png";
+const baby025 = "/images/baby-025.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -204,7 +205,17 @@ function Index() {
             desc="استفاده از نگین‌های مقاوم و تزئینات بادوام، طراحی زیبا در دو رنگ، مناسب بانوان و استفاده روزمره."
             image={queen010}
           />
-          <ProductCard soon />
+          <ProductCard
+            name="Baby 😉"
+            code="025"
+            material="PVC"
+            price="۴۵۰"
+            priceUnit="فی درجن"
+            colors={["گلابی", "زرد", "بادنجانی", "مکس"]}
+            size="۲۳ - ۲۸"
+            desc="دمپایی بچه‌گانه طرح چشم بزرگ، ۹ جوره فی درجن. رنگ‌های شاد و مکس، مناسب کودکان و هدیه."
+            image={baby025}
+          />
           <ProductCard soon />
         </div>
       </Section>
@@ -526,6 +537,7 @@ function ProductCard({
   code,
   material,
   price,
+  priceUnit = "افغانی",
   colors,
   size,
   desc,
@@ -536,6 +548,7 @@ function ProductCard({
   code?: string;
   material?: string;
   price?: string;
+  priceUnit?: string;
   colors?: string[];
   size?: string;
   desc?: string;
@@ -575,7 +588,7 @@ function ProductCard({
           </div>
           <div className="text-left">
             <div className="text-gold font-[Playfair_Display] text-xl font-bold">{price}</div>
-            <div className="text-[10px] text-muted-foreground">افغانی</div>
+            <div className="text-[10px] text-muted-foreground">{priceUnit}</div>
           </div>
         </div>
         <p className="text-sm leading-relaxed text-muted-foreground">{desc}</p>
