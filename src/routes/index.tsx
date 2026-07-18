@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 
 const queen010 = "/images/queen-010.png";
+const baby025 = "/images/baby-025.jpg";
 
 export const Route = createFileRoute("/")({
   component: Index,
@@ -148,8 +149,8 @@ function Index() {
                 style={{ background: "var(--gradient-luxury)" }}
               >
                 <img
-                  src={queen010}
-                  alt="کفش زنانه Queen - کد ۰۱۰"
+                  src={baby025}
+                  alt="دمپایی بچه‌گانه Baby - کد ۰۲۵"
                   className="h-full w-full object-cover"
                   loading="eager"
                 />
@@ -157,9 +158,9 @@ function Index() {
                   <div className="glass rounded-2xl p-5">
                     <div className="text-xs text-muted-foreground">محصول ویژه</div>
                     <div className="mt-1 font-[Playfair_Display] text-xl font-bold">
-                      کفش زنانه Queen
+                      Baby 😉
                     </div>
-                    <div className="mt-1 text-sm text-gold">۱۲۵ افغانی</div>
+                    <div className="mt-1 text-sm text-gold">۴۵۰ فی درجن</div>
                   </div>
                 </div>
               </div>
@@ -199,12 +200,23 @@ function Index() {
             code="010"
             material="PVC"
             price="۱۲۵"
-            colors={["سیاه", "جگری"]}
+            priceUnit="فی جوره"
+            colors={["سیاه", "جگری", "خاکستری"]}
             size="۳۵ - ۴۱"
             desc="استفاده از نگین‌های مقاوم و تزئینات بادوام، طراحی زیبا در دو رنگ، مناسب بانوان و استفاده روزمره."
             image={queen010}
           />
-          <ProductCard soon />
+          <ProductCard
+            name="Baby 😉"
+            code="025"
+            material="PVC"
+            price="۴۵۰"
+            priceUnit="فی درجن"
+            colors={["گلابی", "زرد", "بادنجانی", "مکس"]}
+            size="۲۳ - ۲۸"
+            desc="دمپایی بچه‌گانه طرح چشم بزرگ، . رنگ‌های شاد و مکس، مناسب کودکان و هدیه."
+            image={baby025}
+          />
           <ProductCard soon />
         </div>
       </Section>
@@ -526,6 +538,7 @@ function ProductCard({
   code,
   material,
   price,
+  priceUnit = "افغانی",
   colors,
   size,
   desc,
@@ -536,6 +549,7 @@ function ProductCard({
   code?: string;
   material?: string;
   price?: string;
+  priceUnit?: string;
   colors?: string[];
   size?: string;
   desc?: string;
@@ -575,7 +589,7 @@ function ProductCard({
           </div>
           <div className="text-left">
             <div className="text-gold font-[Playfair_Display] text-xl font-bold">{price}</div>
-            <div className="text-[10px] text-muted-foreground">افغانی</div>
+            <div className="text-[10px] text-muted-foreground">{priceUnit}</div>
           </div>
         </div>
         <p className="text-sm leading-relaxed text-muted-foreground">{desc}</p>

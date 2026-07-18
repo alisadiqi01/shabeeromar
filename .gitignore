@@ -30,3 +30,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
+*.tsx
+=======
+.env
+>>>>>>> 9ec1a5814654012c7ca1ce0247fdcede367c09c6
